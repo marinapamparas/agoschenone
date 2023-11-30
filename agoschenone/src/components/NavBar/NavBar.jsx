@@ -44,9 +44,9 @@ const NavBar = () => {
             </Navbar.Collapse>
 
             <div className="iconnavbar">
-                <a href='https://www.instagram.com/agoschenone/' className='iconcontainer'><FaInstagram className='icon'/></a>
+                <a href='https://www.instagram.com/agoschenone/' target="_blank" className='iconcontainer'><FaInstagram className='icon'/></a>
                 
-                <a href="https://www.behance.net/agoschenone/" className='iconcontainer'><FaBehance className='icon'/></a>
+                <a href="https://www.behance.net/agoschenone/" target="_blank" className='iconcontainer'><FaBehance className='icon'/></a>
             </div>
         </Container>
     </Navbar>
