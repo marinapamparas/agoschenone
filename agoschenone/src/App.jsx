@@ -1,5 +1,6 @@
 import NavBar from './components/NavBar/NavBar';
-import { BrowserRouter} from "react-router-dom";
+import Footer from './components/Footer/Footer';
+import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import './App.css';
 
 function App() {
@@ -11,7 +12,13 @@ function App() {
     <BrowserRouter>
       
       <NavBar />
-           
+
+      <Routes>
+        <Route path='*' element= {<Navigate to='/'/>} /> 
+      </Routes>    
+
+      <Footer/>
+
     </BrowserRouter>
   </div>
     
