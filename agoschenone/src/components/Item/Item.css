@@ -1,0 +1,47 @@
+.contenedorImagen{
+    display: block;
+    break-inside: avoid;
+    position: relative;
+    overflow: hidden;
+    border-radius: 0;
+    margin: 0;
+    /* width: calc(33.33% - 20px); Establece el ancho de cada tarjeta */
+    /* float: left; Alinea las tarjetas en una cuadrícula */
+    /* height: 100%; */
+}
+
+.contenedorImagen:hover .imgsection{
+    transform: scale(1.1); /* Hace zoom en la imagen */
+    filter: brightness(70%); /* Aplica una sombra negra */
+    opacity: 1; /* Muestra el título al hacer hover sobre la tarjeta */
+}
+
+.contenedorImagen:hover .sectiontitle{
+    opacity: 1; /* Muestra el título al hacer hover sobre la tarjeta */
+}
+
+
+.sectiontitle{
+    font-size: x-large;
+    position: absolute; /* Posición absoluta para que el texto quede encima de la imagen */
+    top: 50%; /* Posiciona el texto en el centro verticalmente */
+    left: 50%; /* Posiciona el texto en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro */
+    z-index: 1; /* Asegura que el texto esté por encima de la imagen */
+    text-align: center; /* Centra el texto horizontalmente */
+    color: white; /* Color del texto */
+    opacity: 0; /* Oculta el título por defecto */
+    transition: opacity 0.3s ease; /* Añade una transición suave */
+}
+
+.imgsection{
+    max-width: 100%;
+    height: auto;
+    padding: 1%;
+    transition: transform 0.3s, filter 0.3s;
+}
+
+.contenedorImagen h2 {
+    text-align: center; /* Centra horizontalmente el texto */
+    margin: 0; /* Elimina el margen por defecto del h2 */
+}

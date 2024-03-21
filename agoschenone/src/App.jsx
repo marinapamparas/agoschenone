@@ -1,7 +1,9 @@
 import NavBar from './components/NavBar/NavBar';
 import Footer from './components/Footer/Footer';
+import ItemListContainer from './components/ItemListContainer/ItemListContainer';
 import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import './App.css';
+import Portfolio from './components/Portfolio/Portfolio';
 
 function App() {
   
@@ -14,7 +16,10 @@ function App() {
       <NavBar />
 
       <Routes>
-        <Route path='*' element= {<Navigate to='/'/>} /> 
+        <Route path='/' element={<ItemListContainer/>} />
+        <Route path='/category/:galCategory' element={<ItemListContainer greeting='Titulo de cada categoria'/>} />
+        <Route path='/portfolio' element={<Portfolio/>}/>
+        <Route path='*' element= {<Navigate to='/'/>} />
       </Routes>    
 
       <Footer/>

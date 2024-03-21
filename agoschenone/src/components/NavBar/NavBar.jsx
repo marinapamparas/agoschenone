@@ -12,9 +12,9 @@ import logo from '../../assets/ASC.png';
 
 const NavBar = () => {
     return (
-    <Navbar collapseOnSelect expand="lg" className="bg-body-tertiary" >
+    <Navbar collapseOnSelect expand="lg"  >
         <Container className='containernavbar'>
-            <Navbar.Brand href="#home"><img src={logo} alt="logo agoschenone" className='logoimg' /></Navbar.Brand>
+            <Link to='/' className='navbar-brand'><img src={logo} alt="logo agoschenone" className='logoimg' /></Link>
             
             <Navbar.Toggle aria-controls="responsive-navbar-nav" className='togglenavbar' />
           
@@ -22,21 +22,33 @@ const NavBar = () => {
                 
                 <Nav className="me-auto navbarcollapse">
                     
-                    <Nav.Link href="#features">About me</Nav.Link>
+                    <Link to='/' className='nav-links'>About me</Link>
                     
-                    <NavDropdown title="Gallery" id="collapsible-nav-dropdown">
+                    <NavDropdown title="Gallery" id="collapsible-nav-dropdown" className='nav-dropdown'>
                         
-                        <NavDropdown.Item href="#action/3.1">Weddings</NavDropdown.Item>
+                        <Link to='/category/Events' className='dropdown-item'>Events</Link>
                         
-                        <NavDropdown.Item href="#action/3.2">Hotels</NavDropdown.Item>
-                        
-                        <NavDropdown.Item href="#action/3.3">Portraits</NavDropdown.Item>
+                        <Link to='/category/Family' className='dropdown-item'>Family</Link>
+
+                        <Link to='/category/Fashion' className='dropdown-item'>Fashion</Link>
+
+                        <Link to='/category/Hotels' className='dropdown-item'>Hotels</Link>
+
+                        <Link to='/category/Portraits' className='dropdown-item'>Portraits</Link>
+
+                        <Link to='/category/Products' className='dropdown-item'>Products</Link>
+
+                        <Link to='/category/Street' className='dropdown-item'>Street</Link>
+
+                        <Link to='/category/Travels' className='dropdown-item'>Travels</Link>
+
+                        <Link to='/category/Weddings' className='dropdown-item'>Weddings</Link>
                     
                     </NavDropdown>
                 
-                    <Nav.Link href="#deets">Portfolio</Nav.Link>
+                    <Link to='/portfolio' className='nav-links'>Portfolio</Link>
                     
-                    <Nav.Link href="#memes">Shop</Nav.Link>
+                    <Link to='/' className='nav-links'>Shop</Link>
 
                 
                 </Nav>

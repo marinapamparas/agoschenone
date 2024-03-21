@@ -1,0 +1,10 @@
+.titleSections{
+    text-align: center;
+    position: absolute; /* Posición absoluta para que el texto quede encima de la imagen */
+    top: 20%; /* Posiciona el texto en el centro verticalmente */
+    left: 50%; /* Posiciona el texto en el centro horizontalmente */
+    transform: translate(-50%, -50%); /* Centra el texto exactamente en el centro */
+    z-index: 1; 
+
+}
+

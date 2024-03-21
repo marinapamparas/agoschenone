@@ -1,0 +1,18 @@
+
+.contenedoritemlist{
+    margin-top: 125;
+    margin-bottom: 10vh;
+}
+
+@media (min-width: 500px) {
+    .contenedoritemlist{
+        margin-top: 11vh; 
+        margin-bottom: 17vh;
+     }
+  }
+
+  @media (min-width: 760px) {
+    .contenedoritemlist{
+        margin: 17vh 0vw 25vh 7vw; 
+     }
+  }
