@@ -4,6 +4,7 @@ import ItemListContainer from './components/ItemListContainer/ItemListContainer'
 import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import './App.css';
 import Portfolio from './components/Portfolio/Portfolio';
+import AboutMe from './components/AboutMe/AboutMe';
 
 function App() {
   
@@ -17,6 +18,7 @@ function App() {
 
       <Routes>
         <Route path='/' element={<ItemListContainer/>} />
+        <Route path='/aboutme' element={<AboutMe/>} />
         <Route path='/category/:galCategory' element={<ItemListContainer greeting='Titulo de cada categoria'/>} />
         <Route path='/portfolio' element={<Portfolio/>}/>
         <Route path='*' element= {<Navigate to='/'/>} />

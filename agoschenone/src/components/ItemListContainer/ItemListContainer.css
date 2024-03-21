@@ -1,6 +1,6 @@
 
 .contenedoritemlist{
-    margin-top: 125;
+    margin-top: 8vh;
     margin-bottom: 10vh;
 }
 
@@ -13,6 +13,6 @@
 
   @media (min-width: 760px) {
     .contenedoritemlist{
-        margin: 17vh 0vw 25vh 7vw; 
+        margin: 12vh 0vw 25vh 7vw; 
      }
   }

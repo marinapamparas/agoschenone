@@ -1,0 +1,97 @@
+.containerAboutMe{
+    margin-top: 8vh;
+    margin-bottom: 8vh;
+}
+
+.containerImgText{
+    padding: 2%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: center;
+    align-items: center; 
+}
+
+.textImg{
+    font-size: medium;
+    text-align: center;
+    padding: 5%;
+}
+.imgAgos{
+    width: 100%;
+    position: relative; 
+}
+
+.containerText{
+    padding: 10%;
+    text-align: center;
+    font-size: small;
+}
+
+@media (min-width: 500px) {
+    .containerAboutMe{
+        margin-top: 11vh; 
+        margin-bottom: 13vh;
+    }
+    .containerText{
+        font-size: large;
+    }
+    .textImg{
+        font-size: x-large;
+        padding: 5% 8% 0% 8%;
+    }
+
+}
+
+@media (min-width: 760px) {
+    .containerAboutMe{
+        margin: 12vh 0vw 25vh 0vw; 
+    }
+    .containerImgText{
+        padding: 2%;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        
+        
+    }
+    .textImg{
+        width: 50%;
+        font-size: x-large;
+        text-align: left;
+        padding: 2%;
+    }
+    .imgAgos{
+        width: 50%;
+        position: relative; 
+    }
+
+    .containerText{
+        padding: 8%;
+        text-align: center;
+    }
+}
+
+@media (min-width: 1000px) {
+    .containerText{
+        font-size: x-large;
+    }
+    .textImg{
+        width: 45%;
+        font-size: xx-large;
+    }
+    .imgAgos{
+        width: 45%;
+        position: relative; 
+    }
+}
+
+
+
+
+
+

@@ -22,7 +22,7 @@ const NavBar = () => {
                 
                 <Nav className="me-auto navbarcollapse">
                     
-                    <Link to='/' className='nav-links'>About me</Link>
+                    <Link to='/aboutme' className='nav-links'>About me</Link>
                     
                     <NavDropdown title="Gallery" id="collapsible-nav-dropdown" className='nav-dropdown'>
                         
