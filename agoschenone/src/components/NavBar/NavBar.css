@@ -71,7 +71,8 @@
 
   .containernavbar{
     --bs-gutter-x: 0 !important;
-    justify-content: center;    
+    justify-content: center;   
+    border-bottom: solid .1em rgba(0, 0, 0, 0.042); 
   }
 
   .bg-body-tertiary {
@@ -105,21 +106,29 @@
     background: white;
     border: 0;
     transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    padding-left: .5em;
+  }
+  .nav-link{
+    padding-left: .5em !important;
   }
   .nav-dropdown{
     background: white;
     text-align: left;
     
   }
+  .dropdown-menu {
+    --bs-dropdown-min-width: 15rem !important;
+    --bs-dropdown-border-color: none !important;
 
+  }
   .dropdown-item {
     display: block;
     width: 100%;
     padding: var(--bs-dropdown-item-padding-y) var(--bs-dropdown-item-padding-x);
-    
+    margin-bottom: 1em;
+    color: rgb(108, 102, 102) !important;
     clear: both;
     font-weight: 400;
-    color: var(--bs-dropdown-link-color);
     text-align: inherit;
     text-decoration: none;
     white-space: nowrap;
@@ -127,6 +136,7 @@
     border: 0;
     border-radius: var(--bs-dropdown-item-border-radius,0);
 }
+ /*color: var(--bs-dropdown-link-color);*/
 
   .navbar-collapse{
     flex-grow: 0 !important;
@@ -165,9 +175,9 @@
   
   .navbarcollapse {
     position: fixed;
-    top: 13%;
+    top: 10%;
     bottom: 100%;
-    left: 65%;
+    left: 43%;
     width: 50%;
     text-align: left;
     background-color: rgba(255, 255, 255, 0.497);
@@ -182,14 +192,15 @@
 
   @media (min-width: 500px) {
     .navbarcollapse {
-      left: 68%;
-      top: 18%;
+      left: 55%;
+      top: 12%;
     }
   }
 
   @media (min-width: 630px) {
     .navbarcollapse {
-      left: 64%;
+      top: 12%;
+      left: 65%;
       
     }
   }
@@ -199,7 +210,6 @@
     }
     .navbarcollapse {
       left: 64%;
-      top: 15%
     }
   }
 
@@ -266,5 +276,10 @@
   @media (min-width: 1350px) {
     .containernavbar{
       max-width: 1450px !important;
+    }
+  }
+  @media (min-width: 1550px) {
+    .containernavbar{
+      max-width: 1550px !important;
     }
   }

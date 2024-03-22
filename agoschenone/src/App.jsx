@@ -5,6 +5,7 @@ import { BrowserRouter, Route, Routes, Navigate} from "react-router-dom";
 import './App.css';
 import Portfolio from './components/Portfolio/Portfolio';
 import AboutMe from './components/AboutMe/AboutMe';
+import Shop from './components/Shop/Shop';
 
 function App() {
   
@@ -21,6 +22,8 @@ function App() {
         <Route path='/aboutme' element={<AboutMe/>} />
         <Route path='/category/:galCategory' element={<ItemListContainer greeting='Titulo de cada categoria'/>} />
         <Route path='/portfolio' element={<Portfolio/>}/>
+        <Route path='/portfolio/client/:portCategory' element={<Portfolio/>}/>
+        <Route path='/shop' element={<Shop/>}/>
         <Route path='*' element= {<Navigate to='/'/>} />
       </Routes>    
 

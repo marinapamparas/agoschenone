@@ -56,7 +56,7 @@ const ItemListContainer = () =>{
       
           let queryFilter = queryCollection;
 
-
+          
       
           if (galCategory) {
             queryFilter = query(queryCollection, where('category', '==', galCategory));

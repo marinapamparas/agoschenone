@@ -1,14 +1,14 @@
-import Item from '../Item/Item'
-import ItemDetail from '../ItemDetail/ItemDetail';
-import "./ItemList.css"
+import PortfolioItem from "../PortfolioItem/PortfolioItem";
+import "./PortfolioList.css"
 import { storage, getDownloadURL, ref, listAll } from "../../firebase/config";
 import { useEffect, useState} from "react"
 import Loading from "../Loading/Loading"
+import Clients from "../Clients/Clients";
    
 
 
 
-const ItemList = ({galeria}) => { 
+const PortfolioList = ({portfolio}) => { 
     const [isLoading, setIsLoading] = useState(true)
     
 
@@ -44,10 +44,10 @@ const ItemList = ({galeria}) => {
     };
     
 
-    const fetchData = async (paramGaleria) => {
+    const fetchData = async (paramPortfolio) => {
         try { 
-            paramGaleria[0].fotosCategoria = await getUrlAllImage(paramGaleria[0].imagesurl)
-            console.log("galeria llena de urls", paramGaleria)
+            paramPortfolio[0].fotosPortfolioCliente = await getUrlAllImage(paramPortfolio[0].imagesurl)
+            
         } catch (error) {
         console.error(error);
         } finally {
@@ -57,25 +57,28 @@ const ItemList = ({galeria}) => {
         
     useEffect(() => {
         
-        fetchData(galeria);
+        fetchData(portfolio);
     }, []);
   
 
 
-    if (galeria !== undefined) {
+    if (portfolio !== undefined) {
         let urlActual = window.location.href
 
-        if(urlActual.includes('category')){
+        
+
+        if(urlActual.includes('client')){
+            
             return (
-                <div className='contenedorCardsDetail'>
-                     { isLoading ? <Loading /> : <ItemDetail galeria = {galeria[0]} />}
+                <div className='contenedorPC'>
+                     { isLoading ? <Loading /> : <Clients portfolio = {portfolio[0]} />}
                 </div>
             )
         }
         else{
             return (
-                <div className='contenedorCards'>
-                    {galeria.map(prod =>  <Item className='cardsItem' key={prod.id} {...prod}/>)}
+                <div className='contenedorPI'>
+                    {portfolio.map(prod =>  <PortfolioItem className='cardsItem' key={prod.id} {...prod}/>)}
                 </div>
             )
         }
@@ -84,4 +87,4 @@ const ItemList = ({galeria}) => {
     
 }
 
-export default ItemList
+export default PortfolioList

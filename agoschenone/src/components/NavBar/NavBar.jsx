@@ -28,11 +28,11 @@ const NavBar = () => {
                         
                         <Link to='/category/Events' className='dropdown-item'>Events</Link>
                         
-                        <Link to='/category/Family' className='dropdown-item'>Family</Link>
+                        <Link to='/category/Family and Couples' className='dropdown-item'>Family and Couples</Link>
 
                         <Link to='/category/Fashion' className='dropdown-item'>Fashion</Link>
 
-                        <Link to='/category/Hotels' className='dropdown-item'>Hotels</Link>
+                        <Link to='/category/Hotel and Restaurants' className='dropdown-item'>Hotel and Restaurants</Link>
 
                         <Link to='/category/Portraits' className='dropdown-item'>Portraits</Link>
 
@@ -48,7 +48,7 @@ const NavBar = () => {
                 
                     <Link to='/portfolio' className='nav-links'>Portfolio</Link>
                     
-                    <Link to='/' className='nav-links'>Shop</Link>
+                    <Link to='/shop' className='nav-links'>Shop</Link>
 
                 
                 </Nav>
