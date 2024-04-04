@@ -1,54 +1,71 @@
 import './NavBar.css';
-import { FaInstagram, FaBehance } from 'react-icons/fa';
 import Container from 'react-bootstrap/Container';
+import { FaInstagram, FaBehance } from 'react-icons/fa';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import { Link } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import logo from '../../assets/ASC.png';
-
+import { useState} from 'react';
 
 
 const NavBar = () => {
+
+    const [expanded, setExpanded] = useState(false);
+    const [galleryOpen, setGalleryOpen] = useState(false);
+  
+
+
+    const closeMenu = () => {
+        setExpanded(false);
+        setGalleryOpen(false);
+    };
+
+    const toggleGallery = () => {
+        setGalleryOpen(!galleryOpen);
+    };
+
+
+
     return (
-    <Navbar collapseOnSelect expand="lg"  >
+    <Navbar collapseOnSelect expand="lg" expanded={expanded} >
         <Container className='containernavbar'>
             <Link to='/' className='navbar-brand'><img src={logo} alt="logo agoschenone" className='logoimg' /></Link>
             
-            <Navbar.Toggle aria-controls="responsive-navbar-nav" className='togglenavbar' />
+            <Navbar.Toggle onClick={() => setExpanded(!expanded)} aria-controls="responsive-navbar-nav" className='togglenavbar' />
           
             <Navbar.Collapse id="responsive-navbar-nav" className='navbarcollapse'>
                 
                 <Nav className="me-auto navbarcollapse">
                     
-                    <Link to='/aboutme' className='nav-links'>About me</Link>
+                    <Link to='/aboutme' className='nav-links' onClick={closeMenu} >About me</Link>
                     
-                    <NavDropdown title="Gallery" id="collapsible-nav-dropdown" className='nav-dropdown'>
+                    <NavDropdown title="Gallery" id="collapsible-nav-dropdown"  className='nav-dropdown'  show={galleryOpen} onClick={toggleGallery}>
                         
-                        <Link to='/category/Events' className='dropdown-item'>Events</Link>
+                        <Link to='/category/Events' className='dropdown-item'  onClick={closeMenu} >Events</Link>
                         
-                        <Link to='/category/Family and Couples' className='dropdown-item'>Family and Couples</Link>
+                        <Link to='/category/Family and Couples' className='dropdown-item'  onClick={closeMenu} >Family and Couples</Link>
 
-                        <Link to='/category/Fashion' className='dropdown-item'>Fashion</Link>
+                        <Link to='/category/Fashion' className='dropdown-item'  onClick={closeMenu} >Fashion</Link>
 
-                        <Link to='/category/Hotel and Restaurants' className='dropdown-item'>Hotel and Restaurants</Link>
+                        <Link to='/category/Hotel and Restaurants' className='dropdown-item'  onClick={closeMenu} >Hotel and Restaurants</Link>
 
-                        <Link to='/category/Portraits' className='dropdown-item'>Portraits</Link>
+                        <Link to='/category/Portraits' className='dropdown-item'  onClick={closeMenu} >Portraits</Link>
 
-                        <Link to='/category/Products' className='dropdown-item'>Products</Link>
+                        <Link to='/category/Products' className='dropdown-item' onClick={closeMenu} >Products</Link>
 
-                        <Link to='/category/Street' className='dropdown-item'>Street</Link>
+                        <Link to='/category/Street' className='dropdown-item'  onClick={closeMenu} >Street</Link>
 
-                        <Link to='/category/Travels' className='dropdown-item'>Travels</Link>
+                        <Link to='/category/Travels' className='dropdown-item'  onClick={closeMenu} >Travels</Link>
 
-                        <Link to='/category/Weddings' className='dropdown-item'>Weddings</Link>
+                        <Link to='/category/Weddings' className='dropdown-item'  onClick={closeMenu} >Weddings</Link>
                     
                     </NavDropdown>
                 
-                    <Link to='/portfolio' className='nav-links'>Portfolio</Link>
+                    <Link to='/portfolio' className='nav-links' onClick={closeMenu}>Portfolio</Link>
                     
-                    <Link to='/shop' className='nav-links'>Shop</Link>
+                    <Link to='/shop' className='nav-links' onClick={closeMenu}>Shop</Link>
 
                 
                 </Nav>
