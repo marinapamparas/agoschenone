@@ -1,0 +1,6 @@
+.imgPortfolio{
+    max-width: 100%;
+    height: auto;
+    padding: 1%;
+    transition: transform 0.3s, filter 0.3s;
+}

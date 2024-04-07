@@ -13,10 +13,10 @@ const Clients = ({portfolio}) => {
                     <div className='returnItemDetail'>
                         <h2 className="titleSections">{portfolio.client}</h2>
                         
-                        <div className='containerImgs'>
+                        <div className='divClients'>
                             {portfolio.fotosPortfolioCliente.map((imagen, index) => (
                             <div key={index}>
-                                <img variant="top" src={imagen} />
+                                <img variant="top" src={imagen} className="imgClients"/>
                             </div>
                             ))}
                         </div>    

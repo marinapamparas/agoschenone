@@ -8,7 +8,7 @@ const PortfolioItem = (portfolio) => {
 
       
         <div className="contenedorImagen">
-            <Link to= {'/portfolio/client/' + portfolio.client}><img src={portfolio.fotoPortada} alt="portada client" className="imgsection"/></Link>
+            <Link to= {'/portfolio/client/' + portfolio.client}><img src={portfolio.fotoPortada} alt="portada client" className="imgPortfolio"/></Link>
             <h2 className="sectiontitle">{portfolio.client}</h2>
         </div>
         
