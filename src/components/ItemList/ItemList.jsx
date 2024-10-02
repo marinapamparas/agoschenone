@@ -46,6 +46,7 @@ const ItemList = ({galeria}) => {
 
     const fetchData = async (paramGaleria) => {
         try { 
+            console.log("paramGaleria", paramGaleria)
             paramGaleria[0].fotosCategoria = await getUrlAllImage(paramGaleria[0].imagesurl)
             console.log("galeria llena de urls", paramGaleria)
         } catch (error) {
@@ -57,7 +58,10 @@ const ItemList = ({galeria}) => {
         
     useEffect(() => {
         
-        fetchData(galeria);
+        if(galeria != undefined){
+            fetchData(galeria);
+        }
+        
     }, []);
   
 

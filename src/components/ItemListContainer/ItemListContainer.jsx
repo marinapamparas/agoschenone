@@ -1,7 +1,7 @@
 import "./ItemListContainer.css"
 import ItemList from "../ItemList/ItemList"
 import Loading from "../Loading/Loading"
-import { getDocs, getFirestore, collection, query, where } from 'firebase/firestore';
+import { getDocs, getFirestore, collection, query, where, orderBy } from 'firebase/firestore';
 import { storage, getDownloadURL, ref, listAll } from "../../firebase/config";
 import { useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
@@ -20,10 +20,14 @@ const ItemListContainer = () =>{
       
         try {
           const listResult = await listAll(ref (storage, path));
-      
+
+          console.log("listResult", listResult)
+
           if (listResult && listResult.items) {
+            console.log("listResult.items", listResult.items)
             for (const item of listResult.items) {
               const imageUrl = await getDownloadURL(ref (storage,item));
+              console.log("imageUrl", imageUrl)
               urls.push(imageUrl);
             }
           }
@@ -54,13 +58,17 @@ const ItemListContainer = () =>{
           const db = getFirestore();
           const queryCollection = collection(db, nameCollection);
       
-          let queryFilter = queryCollection;
+          // let queryFilter = queryCollection;
 
           
       
-          if (galCategory) {
-            queryFilter = query(queryCollection, where('category', '==', galCategory));
-          }
+          // if (galCategory) {
+          //   queryFilter = query(queryCollection, where('category', '==', galCategory));
+          // }
+          // Aplica el filtro de categoría si existe
+          let queryFilter = galCategory
+          ? query(queryCollection, where('category', '==', galCategory), orderBy('number'))
+          : query(queryCollection, orderBy('number')); // Ordena por la propiedad 'number'
 
           setIsLoading(true);
       
@@ -78,7 +86,7 @@ const ItemListContainer = () =>{
           setGaleria(data);
           console.log(data, 'data');
         } catch (error) {
-          console.error(error);
+          console.error(error.message);
         } finally {
           setIsLoading(false);
         }

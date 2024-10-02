@@ -1,6 +1,6 @@
 import './Portfolio.css'
 import Loading from "../Loading/Loading"
-import { getDocs, getFirestore, collection, query, where } from 'firebase/firestore';
+import { getDocs, getFirestore, collection, query, where, orderBy } from 'firebase/firestore';
 import { storage, getDownloadURL, ref, listAll } from "../../firebase/config";
 import { useEffect, useState} from "react"
 import { useParams } from "react-router-dom"
@@ -53,13 +53,17 @@ const Portfolio = () =>{
           const db = getFirestore();
           const queryCollection = collection(db, nameCollection);
       
-          let queryFilter = queryCollection;
+          // let queryFilter = queryCollection;
 
-            console.log("hh", portCategory)
+          //   console.log("hh", portCategory)
       
-          if (portCategory) {
-            queryFilter = query(queryCollection, where('client', '==', portCategory));
-          }
+          // if (portCategory) {
+          //   queryFilter = query(queryCollection, where('client', '==', portCategory));
+          // }
+          let queryFilter = portCategory
+            ? query(queryCollection, where('client', '==', portCategory), orderBy('number')) // Filtro y orden por 'number'
+            : query(queryCollection, orderBy('number')); // Solo orden por 'number' si no hay categoría
+
 
           setIsLoading(true);
       

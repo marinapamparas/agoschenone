@@ -37,7 +37,7 @@
 .imgsection{
     max-width: 100%;
     height: auto;
-    padding: 1%;
+    padding: .5em 0em .5em 0em;
     transition: transform 0.3s, filter 0.3s;
 }
 

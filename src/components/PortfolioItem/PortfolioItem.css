@@ -1,6 +1,11 @@
 .imgPortfolio{
     max-width: 100%;
     height: auto;
-    padding: 1%;
+    padding: .2em 0em .2em 0em;
     transition: transform 0.3s, filter 0.3s;
+}
+.imgPortfolio:hover{
+    transform: scale(1.1); /* Hace zoom en la imagen */
+    filter: brightness(70%); /* Aplica una sombra negra */
+    opacity: 1; /* Muestra el título al hacer hover sobre la tarjeta */
 }

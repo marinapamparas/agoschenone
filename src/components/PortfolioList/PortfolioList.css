@@ -17,6 +17,15 @@
     
 }
 
+.cardsItem:hover{
+    transform: scale(1.1); /* Hace zoom en la imagen */
+    filter: brightness(70%); /* Aplica una sombra negra */
+    opacity: 3; /* Muestra el título al hacer hover sobre la tarjeta */
+}
+
+.cardsItem:hover{
+    opacity: 1; /* Muestra el título al hacer hover sobre la tarjeta */
+}
 
 @media (min-width: 760px) {
 
@@ -25,7 +34,7 @@
         flex-flow: row wrap; */
         display: block;
         columns: 4 220px;
-        column-gap: .3em;
+        column-gap: .4em;
         padding-right: 15vw;
         /* display: grid;
         grid-template-columns: repeat(3, 1fr); /
