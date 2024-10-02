@@ -12,7 +12,6 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    
     padding: 15px;
     margin-top: 23vh;
     
@@ -36,7 +35,7 @@
     .contenedorCardsDetail{
         display: block;
         columns: 3 320px;
-        column-gap: 0em;
+        column-gap: .5em;
         padding-right: 15vw;
         margin-top: 23vh;
         

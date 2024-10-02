@@ -16,7 +16,7 @@ const ItemDetail = ({galeria}) => {
                         <div className='containerImgs'>
                             {galeria.fotosCategoria.map((imagen, index) => (
                             <div key={index}>
-                                <img variant="top" src={imagen} />
+                                <img variant="top" src={imagen} className="detailImg"/>
                             </div>
                             ))}
                         </div>    
