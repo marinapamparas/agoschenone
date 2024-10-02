@@ -45,15 +45,17 @@ const NavBar = () => {
                         
                         <Link to='/category/Events' className='dropdown-item'  onClick={closeMenu} >Events</Link>
                         
-                        <Link to='/category/Family and Couples' className='dropdown-item'  onClick={closeMenu} >Family and Couples</Link>
+                        <Link to='/category/Couples and Families' className='dropdown-item'  onClick={closeMenu} >Couples and Families</Link>
 
                         <Link to='/category/Fashion' className='dropdown-item'  onClick={closeMenu} >Fashion</Link>
 
                         <Link to='/category/Hotel and Restaurants' className='dropdown-item'  onClick={closeMenu} >Hotel and Restaurants</Link>
 
+                        <Link to='/category/Products' className='dropdown-item'  onClick={closeMenu} >Products</Link>
+
                         <Link to='/category/Portraits' className='dropdown-item'  onClick={closeMenu} >Portraits</Link>
 
-                        <Link to='/category/Products' className='dropdown-item' onClick={closeMenu} >Products</Link>
+                        <Link to='/category/Shot on Film' className='dropdown-item' onClick={closeMenu} >Shot on Film</Link>
 
                         <Link to='/category/Street' className='dropdown-item'  onClick={closeMenu} >Street</Link>
 

@@ -21,6 +21,7 @@
 .imgAgos{
     width: 100%;
     position: relative; 
+    mask-image: linear-gradient(to right, rgb(0, 0, 0) 63%, transparent 100%);
 }
 
 .containerText{
