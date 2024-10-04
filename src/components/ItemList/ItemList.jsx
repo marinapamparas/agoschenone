@@ -4,7 +4,7 @@ import "./ItemList.css"
 import { storage, getDownloadURL, ref, listAll } from "../../firebase/config";
 import { useEffect, useState} from "react"
 import Loading from "../Loading/Loading"
-   
+
 
 
 
@@ -63,9 +63,8 @@ const ItemList = ({galeria}) => {
         }
         
     }, []);
+
   
-
-
     if (galeria !== undefined) {
         let urlActual = window.location.href
 

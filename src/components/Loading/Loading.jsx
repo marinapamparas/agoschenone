@@ -5,7 +5,7 @@ const Loading = () => {
   return (
     <div className='cargandoContainer'>
         <div className='loader'></div>
-        <h2 className='cargando'>Loading...</h2>
+        {/* <h2 className='cargando'>Loading...</h2> */}
     </div>
   )
 }
