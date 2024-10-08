@@ -41,9 +41,11 @@ const Footer = () => {
                 <footer className='footer'>
                     <p className='footer_text'>Everything in life is perspective</p>
                     <div className='footer_socials'>
-                        
-                        <FaInstagram className='footer_instagram'/>
-                        <FaBehance className='footer_behance'/>
+                    
+                        <a href='https://www.instagram.com/agoschenone/' target="_blank" className='footer_instagram'><FaInstagram className='icon'/></a>
+                
+                        <a href="https://www.behance.net/agoschenone/" target="_blank" className='footer_behance'><FaBehance className='icon'/></a>
+            
                         
                     </div>
                     <p className='footer_copyright'>Agostina Schenone © {obtenerAnio()} All rights reserved</p>
