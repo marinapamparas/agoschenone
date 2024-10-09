@@ -4,7 +4,7 @@
 }
 
 .containerImgText{
-    padding: 2%;
+    padding: 5%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
@@ -14,20 +14,23 @@
 }
 
 .textImg{
-    font-size: medium;
+    font-size: large;
     text-align: center;
-    padding: 5%;
+    padding: 8% 6% 0% 6%;
 }
 .imgAgos{
-    width: 100%;
+    width: 50%;
     position: relative; 
     mask-image: linear-gradient(to right, rgb(0, 0, 0) 63%, transparent 100%);
+    border-radius: 50%; /* Hace la imagen redonda */
+    object-fit: cover; /* Asegura que la imagen se ajuste dentro del contenedor sin distorsionarse */
+    aspect-ratio: 1/1; /* Mantiene la proporción 1:1 para que la imagen sea cuadrada y luego redonda */
 }
 
 .containerText{
-    padding: 10%;
+    padding: 0% 10% 0% 10%;
     text-align: center;
-    font-size: small;
+    font-size: medium;
 }
 
 @media (min-width: 500px) {
@@ -40,7 +43,7 @@
     }
     .textImg{
         font-size: x-large;
-        padding: 5% 8% 0% 8%;
+        padding: 8% 8% 0% 2%;
     }
 
 }
@@ -50,7 +53,7 @@
         margin: 12vh 0vw 25vh 0vw; 
     }
     .containerImgText{
-        padding: 2%;
+        padding: 2% 0% 0% 0%;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
@@ -64,30 +67,39 @@
         width: 50%;
         font-size: x-large;
         text-align: left;
-        padding: 2%;
+        padding: 8% 0% 0% 8%;
+        
     }
     .imgAgos{
-        width: 50%;
+        width: 30%;
         position: relative; 
+        border-radius: 50%; /* Sigue haciendo la imagen redonda */
+        object-fit: cover;
+        aspect-ratio: 1/1;
     }
 
     .containerText{
-        padding: 8%;
+        padding: 8% 8% 0% 8%;
         text-align: center;
     }
 }
 
 @media (min-width: 1000px) {
     .containerText{
+        padding-bottom: 0%;
         font-size: x-large;
     }
     .textImg{
         width: 45%;
         font-size: xx-large;
+        padding: 2% 0% 0% 10%;
     }
     .imgAgos{
-        width: 45%;
+        width: 25%;
         position: relative; 
+        border-radius: 50%; 
+        object-fit: cover;
+        aspect-ratio: 1/1;
     }
 }
 

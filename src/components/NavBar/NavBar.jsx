@@ -45,7 +45,7 @@ const NavBar = () => {
                         
                         <Link to='/category/Events' className='dropdown-item'  onClick={closeMenu} >Events</Link>
                         
-                        <Link to='/category/Couples and Families' className='dropdown-item'  onClick={closeMenu} >Couples & Families</Link>
+                        <Link to='/category/Couples and Families' className='dropdown-item'  onClick={closeMenu} >Couple & Family</Link>
 
                         <Link to='/category/Fashion' className='dropdown-item'  onClick={closeMenu} >Fashion</Link>
 
