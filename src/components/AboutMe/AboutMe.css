@@ -29,6 +29,7 @@
 
 .containerText{
     padding: 0% 10% 0% 10%;
+    margin-bottom: 30%;
     text-align: center;
     font-size: medium;
 }
@@ -88,6 +89,7 @@
     .containerText{
         padding-bottom: 0%;
         font-size: x-large;
+        margin-bottom: 15%;
     }
     .textImg{
         width: 45%;
