@@ -1,11 +1,13 @@
 <div align='center'>
-<b>
+<b style="font-size: 36px;">
 AS Photography
 </b>
 </div>
+<br>
+<br>
 <div align='center'>
   <a href="https://agoschenone.com" target="_blank">
-    Deploy
+    Visit the Live Site
   </a>
 </div>
 
