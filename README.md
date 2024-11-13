@@ -1,6 +1,6 @@
 <div align='center'>
 <b>
-## AS Photography
+AS Photography
 </b>
 </div>
 <div align='center'>
