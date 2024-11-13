@@ -1,7 +1,7 @@
 <div align='center'>
-<b style="font-size: 36px;">
-AS Photography
-</b>
+
+## AS Photography
+
 </div>
 <br>
 <br>
