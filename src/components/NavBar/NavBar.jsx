@@ -39,7 +39,7 @@ const NavBar = () => {
 
             <Link to='/portfolio' className='nav-links' onClick={closeMenu}>Portfolio</Link>
            
-            <a href='https://agoschenone.darkroom.com/' target='_blank' rel='noopener noreferrer' className='nav-links' onClick={closeMenu}>Shop</a>
+            <a href='https://agoschenone.darkroom.com/' target='_blank' rel='noopener noreferrer' className='nav-links' onClick={closeMenu}>Prints</a>
           </Nav>
             <div className="iconnavbarMobile">
                 <a href='https://www.instagram.com/agoschenone/' target="_blank" rel="noreferrer" className='iconMobile Insta'>
