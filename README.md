@@ -18,6 +18,7 @@ AS Photography is a portfolio website for Agostina Schenone, a photographer base
 -   Gallery: A dynamic gallery organized by different sections to display various types of photography.
 -   About Me: A section that introduces Agostina and includes her contact information.
 -   Portfolio: Displays a portfolio with Agostina’s work across multiple client projects.
+-   Shop: Link to shop.
 
 ## <b>Project Highlights</b>
 -   Custom-designed and developed the website for the client using ReactJS, CSS, and Firebase.
